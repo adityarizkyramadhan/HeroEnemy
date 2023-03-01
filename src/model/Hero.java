@@ -37,4 +37,20 @@ public class Hero {
     public void setEnemy(Enemy enemy) {
         this.enemy = enemy;
     }
+
+
+    public void attackEnemy(){
+        if (this.enemy == null){
+            System.out.println("Hero not set");
+            return;
+        }
+        int healthEnemy = this.enemy.getHealth() - this.attack;
+        if (healthEnemy >= 0){
+            this.enemy.setHealth(healthEnemy);
+            System.out.printf("Hero : %s \nHealth : %d\nHero still alive\n", this.enemy.getName(), enemy.getHealth());
+        }else {
+            System.out.printf("Hero : %s \nHealth : %d\nHero dead\n", this.enemy.getName(), enemy.getHealth());
+            enemy.setHealth(0);
+        }
+    }
 }

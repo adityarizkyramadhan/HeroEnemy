@@ -50,9 +50,9 @@ public class Enemy {
         int healthHero = this.hero.getHealth() - this.attack;
         if (healthHero >= 0){
             hero.setHealth(healthHero);
-            System.out.printf("Hero : %s \nHealth : %d\nHero still alive", this.hero.getName(), hero.getHealth());
+            System.out.printf("Hero : %s \nHealth : %d\nHero still alive\n", this.hero.getName(), hero.getHealth());
         }else {
-            System.out.printf("Hero : %s \nHealth : %d\nHero dead", this.hero.getName(), hero.getHealth());
+            System.out.printf("Hero : %s \nHealth : %d\nHero dead\n", this.hero.getName(), hero.getHealth());
             hero.setHealth(0);
         }
     }
